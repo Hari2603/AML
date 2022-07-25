@@ -1,0 +1,12 @@
+sudo /usr/pgadmin4/bin/setup-web.sh
+
+celery -A carsworld worker -l info -P gevent
+
+redis-server
+
+docker ps: to check which containers are running.
+   sudo docker info: information about image(e.g How many Containers and images)
+   docker images:  To check all available images.
+   docker ps -a : check status of all the containers.
+   docker run redis:4.0--  First pull redis-4.0 and start redis-4.0
+   Bind the container port with host port:     docker -p6000:6379  #where 6000 is host port and 6379 is a container port.
